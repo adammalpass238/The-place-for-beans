@@ -28,8 +28,6 @@
 // - AboutSection
 // - ContactSection
 
-/* --- YOUR IMPORTS GO HERE --- */
-
 
 // STEP 2: Create and export the App component
 // Use: export default function App() { ... }
@@ -54,57 +52,37 @@
 // for the navigation links in the NavBar.
 
 /* --- YOUR COMPONENT CODE GOES HERE --- */
-// imports go below here 
+// imports go below here
+import Navbar from "./components/NavBar";
 
 export default function App() {
-    return(
+    return (
         <div className="app">
             {/* NAVBAR */}
+            <NavBar />
 
             {/* HERO */}
             <section className="hero bg-hero">
-                <div className="hero-grid">
-
-        </div>
-        </section>
-
-        {/*FEATURES / CAROUSEL */}
-        <section className= "features bg-features" id="shop">
-            
+                <div className="hero-grid"></div>
             </section>
-            
-            {/*PRODUCT SHOWCASE */}
-            <section className="bg-cta">
-                
-                </section>
-                
-                {/* CTA */}
-                <section className="bg-cta">
-                    
-                </section>
-                
-            {/* ABOUT */}
-            <section className="bg-cta" id="about">
 
-                </section>
+            {/*FEATURES / CAROUSEL */}
+            <section className="features bg-features" id="shop"></section>
+
+            {/*PRODUCT SHOWCASE */}
+            <section className="bg-cta"></section>
+
+            {/* CTA */}
+            <section className="bg-cta"></section>
+
+            {/* ABOUT */}
+            <section className="bg-cta" id="about"></section>
 
             {/* CONTACT */}
-            <section className="bg-cta" id="contact">
-
-                </section>
+            <section className="bg-cta" id="contact"></section>
 
             {/* FOOTER */}
-            <section className="bg-footer">
-
-                </section>
-            
-            </div>
-
-
-
-    
-
-    
+            <section className="bg-footer"></section>
+        </div>
     );
 }
-
