@@ -53,17 +53,20 @@
 
 /* --- YOUR COMPONENT CODE GOES HERE --- */
 // imports go below here
-import Navbar from "./components/NavBar";
+import NavBar from "./components/NavBar";
+import HeroSection from "./components/HeroSection";
 
 export default function App() {
     return (
         <div className="app">
             {/* NAVBAR */}
-            <NavBar />
+            <NavBar/>
 
             {/* HERO */}
             <section className="hero bg-hero">
-                <div className="hero-grid"></div>
+                <div className="hero-grid">
+                    <HeroSection />
+                </div>
             </section>
 
             {/*FEATURES / CAROUSEL */}
