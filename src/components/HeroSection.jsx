@@ -222,11 +222,11 @@ export default function HeroSection() {
                       type: "spring",
                       stiffness: 200 
                     } }
-                ></motion.div>
+                >  
                     <span className="hero-floating-badge-label">FROM</span>
                     <span className="hero-floating-badge-price">$14.99</span>
                     <span className="hero-floating-badge-label">per bag</span>
-                    
+                    </motion.div>
                 
             </div>
         
