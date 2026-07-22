@@ -29,7 +29,7 @@
 // Import reusable UI components: Button and Badge
 
 /* --- YOUR IMPORTS GO HERE --- */
-import {useEfeect, useState} from "react";
+import {useEffect, useState} from "react";
 import {motion, useScroll, useTransform} from "framer-motion";
 import heroBeans from "../assets/hero-beans.png";
 import Button from "./ui/Button";

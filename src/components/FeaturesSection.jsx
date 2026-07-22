@@ -33,22 +33,22 @@
 
 /* --- YOUR IMPORTS GO HERE --- */
 import { useEffect, useRef, useState } from "react";
-import imgRedSulawesi from "../assets/red-sulawesi.png";
-import imgUrigacheffe from "../assets/yirgacheffe.png";
-import imgTanzaniaPeaberry from "../assets/tanzania-peaberry.png";
-import imgPanamaGeisha from "../assets/panama-geisha.png";
-import imgVietnameseRobusta from "../assets/vietnamese-robusta.png";
-import imgBrazilianSantos from "../assets/brazilian-santos.png";
-import imgCostaRicaTarrazu from "../assets/costa-rica-tarrazu.png";
-import imgGuatemalaAntigua from "../assets/guatemala-antigua.png";
-import imgKenyaAA from "../assets/kenya-aa.png";
-import imgSumatraMandheling from "../assets/sumatra-mandheling.png";
-import imgKona from "../assets/kona.png";
-import imgJamaicanBlueMountain from "../assets/jamaican-blue-mountain.png";
-import imgColombianSupremo from "../assets/colombian-supremo.png";
-import imgEthiopianHarrar from "../assets/ethiopian-harrar.png";
-import imgArabianMocha from "../assets/arabian-mocha.png";
 
+import imgRedSulawesi from "../assets/Red-Sulawesi-Bag.png";
+import imgUrigacheffe from "../assets/Urigacheffe-Bag.png";
+import imgTanzaniaPeaberry from "../assets/Tanzania-Peaberry-Bag.png";
+import imgPanamaGeisha from "../assets/Panama-Geisha.png";
+import imgVietnameseRobusta from "../assets/Vietnamese-Robusta.png";
+import imgBrazilianSantos from "../assets/Brazilian-Santos-Bag.png";
+import imgCostaRicaTarrazu from "../assets/Costa-Rica-Tarrazu-Bag.png";
+import imgGuatemalaAntigua from "../assets/Guatemala-Antigua-Bag.png";
+import imgKenyaAA from "../assets/Kenya-AA-Bag.png";
+import imgSumatraMandheling from "../assets/Sumatra-Mandheling-Bag.png";
+import imgKona from "../assets/Kona-Bag.png";
+import imgJamaicanBlueMountain from "../assets/Jamaican-Blue-Mountain-Bag.png";
+import imgColombianSupremo from "../assets/Colombian-Supremo-Bag.png";
+import imgEthiopianHarrar from "../assets/Ethiopian-Harrar-Bag.png";
+import imgArabianMocha from "../assets/Arabian-Mocha-Bag.png";
 // STEP 2: Define three row arrays (outside the component)
 // Each row contains the same images but in different orders.
 // This creates visual variety in the carousel.
@@ -160,7 +160,7 @@ function ImageRow({ images, offset = 0 }) {
     const doubled = [...images, ...images];
 
     return (
-        <div clssName="carousel-row" style={{ transform: `translate3d(${offset}px, 0, 0)` }}>
+        <div className="carousel-row" style={{ transform: `translate3d (${offset}px, 0, 0)` }}>
             {doubled.map((src, index) => (
                 <div className="carousel-card" key={`${index}`}>
                     <img
@@ -191,12 +191,12 @@ export default function FeaturesSection() {
             
             //Each row moves diff speeds/ dir based on scroll progress
             //scale range to vh width so it works on all screen sizes
-            const range = Math.min( window.innerHeight * 0.5, 600);
+            const range = Math.min( window.innerWidth * 0.5, 600);
             setOffsets( [
                 -p * range, //row 1 slides left
                 p * range - range, // row 2 slides right
                 -p * range * 0.7 //row 3 slides left slower
-            ])
+            ]);
             
         };
         handleScroll();
@@ -206,6 +206,14 @@ export default function FeaturesSection() {
     }, [] );
     
     return(
+       <section className=" carousel-gallery-section" ref={sectionRef}>
+        <div className="carousel-gallery-container">
+            <ImageRow images={row1} offset={offsets[0]} />
+            <ImageRow images={row2} offset={offsets[1]} />
+            <ImageRow images={row3} offset={offsets[2]} />
+        </div>
+        
+        </section>
         
     );
 }
